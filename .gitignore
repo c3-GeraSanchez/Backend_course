@@ -1,2 +1,4 @@
 data/
-get/
+gen/
+.fingerprints.txt
+jsconfig.json
