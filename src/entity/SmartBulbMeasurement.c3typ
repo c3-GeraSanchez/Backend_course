@@ -1,0 +1,39 @@
+/** 
+* SmartBulbMeasurement.c3typ
+* A single measurement taken from a single {@link SmartBulb}.
+*/
+@db(datastore='kv',
+ partitionKeyField='parent',
+ persistenceOrder='start')
+entity type SmartBulbMeasurement mixes IntervalDataPoint<SmartBulbMeasurementSeries>{ 
+
+    /** 
+    * The status of the SmartBulb (on or off)
+    */
+    @ts(treatment='previous')
+    status: int
+
+    /** 
+    * The power of the SmartBulb
+    */
+    @ts(treatment='sum')
+    power: double
+
+    /** 
+    * The lumens of the SmartBulb
+    */
+    @ts(treatment='avg')
+    lumens: double
+
+    /** 
+    * The voltage of the SmartBulb
+    */
+    @ts(treatment='avg')
+    voltage: double
+
+    /** 
+    * The temperature of the SmartBulb
+    */
+    @ts(treatment='avg')
+    temperature: double
+}

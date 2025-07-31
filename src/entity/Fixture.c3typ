@@ -1,0 +1,22 @@
+/** 
+* Fixture.c3typ
+* A Fixture in a {@link Building} with many {@link Fixture}s
+*/
+entity type Fixture {
+    
+    /**
+     * The apartment where this fixture is
+     */ 
+    apartment: !Apartment
+
+    /**
+     * The colection of {@link SmartBulbToFixtureRelation}s for this fixture.
+     */ 
+    @db(order='descending(start)')
+    bulbHistory: [SmartBulbToFixtureRelation](to)
+
+    /**
+     * The {@link Fixture} this bulb is currently in
+     */ 
+    currentBulb: Fixture stored calc bulbHistory[0].(end == null).from
+}

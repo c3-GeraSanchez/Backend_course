@@ -1,0 +1,11 @@
+/**
+ * IntervalDataHeaderTypeName.c3typ
+ * A series of measurements taken from a single {@link <TypeName>}.
+ */
+entity type SmartBulbMeasurementSeries mixes IntervalDataHeader<SmartBulbMeasurement> {
+
+  /**
+   * The {@link SmartBulb} for these measurements
+   */
+  smartBulb: !SmartBulb
+}

@@ -1,0 +1,43 @@
+/** 
+* SmartBulb.c3typ
+* A single {@link SmartBulb}.
+*/
+entity type SmartBulb mixes FeatureEvaluatable {
+
+    /**
+     * The bulb type for this bulb.
+     */ 
+    bulbType: !string enum ('CFL', 'LED', 'INCAN')
+    
+    /**
+     * The light bulb's wattage.
+     */ 
+    wattage: !decimal
+    
+    /**
+     * The name of this bulb's manufacturer.
+     */  
+    manufacturer: !string enum ('Bell', 'GE', 'Philips')
+    
+    /**
+     * The time at which this bulb was manufactured.
+     */ 
+    startDate: !datetime
+
+    /**
+     * The colection of {@link SmartBulbToFixtureRelation}s for this bulb.
+     */ 
+    @db(order='descending(start)')
+    fixtureHistory: [SmartBulbToFixtureRelation](from)
+
+    /**
+     * The {@link Fixture} this bulb is currently in
+     */ 
+    currentFixture: Fixture stored calc fixtureHistory[0].(end == null).to
+
+    /**
+     * The {@link SmartBulbMeasurement}s of this bulb
+     */ 
+    bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb)
+
+}
