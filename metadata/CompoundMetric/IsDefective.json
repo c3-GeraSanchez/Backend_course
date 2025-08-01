@@ -1,0 +1,5 @@
+{
+    "name": "IsDefective",
+    "id": "IsDefective",
+    "expression": "max(eval('HOUR', AverageLumens == 0 && Status == 1))" 
+}
