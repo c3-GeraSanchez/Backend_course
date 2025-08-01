@@ -40,4 +40,10 @@ entity type SmartBulb mixes FeatureEvaluatable {
      */ 
     bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb)
 
+    // The lifespan of a {@link SmartBulb} from manufacture date to failure
+    lifeSpanInYears: member function(): double js-server
+
+    // The average temperature of a {@link SmartBulb} during a particular month
+    averageTemperatureMonth: member function(endDate: datetime): double js-server
+
 }

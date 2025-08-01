@@ -36,4 +36,6 @@ entity type SmartBulbMeasurement mixes IntervalDataPoint<SmartBulbMeasurementSer
     */
     @ts(treatment='avg')
     temperature: double
+
+    start: !datetime
 }
