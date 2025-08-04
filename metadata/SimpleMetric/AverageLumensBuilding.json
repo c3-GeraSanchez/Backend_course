@@ -1,0 +1,8 @@
+{
+    "id": "AverageLumensBuilding",
+    "name": "AverageLumens",
+    "srcType": "Building",
+    "description": "Average lumens of the smart bulbs of a building",
+    "path": "apartments.fixtures.bulbHistory.from.bulbMeasurements",
+    "expression": "avg(avg(normalized.data.lumens))"
+}

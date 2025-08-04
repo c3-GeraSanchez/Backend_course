@@ -2,7 +2,7 @@
 * Apartment.c3typ
 * A apartment in a {@link Building} with many {@link Fixture}s
 */
-entity type Apartment {
+entity type Apartment mixes FeatureEvaluatable {
 
     /**
      * The building this apartment is in
