@@ -1,0 +1,5 @@
+{
+    "name": "SwitchCount",
+    "id": "SwitchCount",
+    "expression": "sum(eval('HOUR', abs(rollingDiff(Status))))"
+}
