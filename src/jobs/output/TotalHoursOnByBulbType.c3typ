@@ -1,0 +1,13 @@
+/**
+* TotalHoursOnByBulbType.c3typ
+*/
+entity type TotalHoursOnByBulbType {
+    
+    bulbType: !string
+
+    start: !datetime
+
+    end: !datetime 
+
+    totalHours: !double 
+}

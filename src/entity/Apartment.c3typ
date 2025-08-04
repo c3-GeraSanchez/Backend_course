@@ -14,4 +14,7 @@ entity type Apartment mixes FeatureEvaluatable {
      */ 
     fixtures: [Fixture](apartment)
 
+    // Return the monthly average temperature of SmartBulbs in an {@link Apartment}
+    averageTemperatureMonth: member function(endDate: datetime): double js-server
+
 }

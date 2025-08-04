@@ -1,0 +1,19 @@
+/**
+* TotalHoursOnByBulbtypeJob.c3typ
+*/
+type TotalHoursOnByBulbTypeJob extends MapReduce<SmartBulb, string, double, double> type key 'TOTALHOURSONBYBULBTYPEJOB' {
+  // Start of the evaluation interval
+  startDate: string
+
+  // End of the evaluation interval
+  endDate: string 
+
+  // Metric evaluation interval
+  interval: string
+
+  // Map function - overriden from MapReduce
+  map:       ~ js-server 
+
+  // Reduce function - overridden from MapReduce
+  reduce:    ~ js-server
+}
