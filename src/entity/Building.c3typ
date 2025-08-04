@@ -7,7 +7,7 @@ entity type Building mixes FeatureEvaluatable {
     /**
      * The city where this building is
      */ 
-    city: string
+    city: !City
     
     /**
      * The apartments in the building

@@ -1,0 +1,16 @@
+/* City.c3typ
+* A City where a {@link Building}s is/are located
+*/
+entity type City {
+    // The name of the city
+    name: string
+
+    // latitude
+    latitude: double 
+
+    // longitude
+    longitude: double
+
+    // The buildings in the city
+    buildings: [Building](city)
+}
