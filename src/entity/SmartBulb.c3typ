@@ -46,4 +46,7 @@ entity type SmartBulb mixes FeatureEvaluatable {
     // The average temperature of a {@link SmartBulb} during a particular month
     averageTemperatureMonth: member function(endDate: datetime): double js-server
 
+    // Return the average life span of all {@link SmartBulb}s
+    averageLifeSpan: function(): double js-server
+
 }

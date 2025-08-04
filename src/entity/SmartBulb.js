@@ -30,6 +30,27 @@ function averageTemperatureMonth(endDate) {
     return average.result.get(this.id).AverageTemperature._data[0];;
 }
 
+function averageLifeSpan() {
+    // declare variables to use later
+    var lightbulbs, sum, avg;
+
+    // Fetch all bulbs
+    lightbulbs = SmartBulb.fetch({ include: "id, startDate", limit: -1 }).objs;
+
+    sum = 0;
+
+    for (var i = 0; i < lightbulbs.length; i++) {
+        sum += lightbulbs[i].lifeSpanInYears();
+    }
+
+    avg = sum / lightbulbs.length;
+    
+    return avg;
+}
+
+
+
+
 
 
 
