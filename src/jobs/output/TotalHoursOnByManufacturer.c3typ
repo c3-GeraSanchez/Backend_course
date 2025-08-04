@@ -1,0 +1,13 @@
+/**
+* TotalHoursOnByManufacturer.c3typ
+*/
+entity type TotalHoursOnByManufacturer {
+    
+    manufacturer: !string
+
+    start: !datetime
+
+    end: !datetime 
+
+    totalHours: !double 
+}
