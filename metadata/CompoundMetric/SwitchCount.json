@@ -1,5 +1,6 @@
 {
     "name": "SwitchCount",
     "id": "SwitchCount",
+    "description": "The total number of times a SmartBulb is switched on or off each day.",
     "expression": "sum(eval('HOUR', abs(rollingDiff(Status))))"
 }
