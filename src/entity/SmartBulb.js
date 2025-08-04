@@ -70,6 +70,27 @@ function shortestLifeSpan(){
     return map;
 }
 
+function longestLifeSpan(){
+    var map = {};
+    var lightbulbs, longest, current;
+
+    lightbulbs = SmartBulb.fetch({ include: "id, startDate", limit: -1 }).objs;
+
+    longestId = lightbulbs[0].id;
+    longest = lightbulbs[0].lifeSpanInYears();
+
+    for(var i = 0; i < lightbulbs.length; i++){
+
+        current = lightbulbs[i].lifeSpanInYears();
+        if (longest < current){
+            longest = current;
+            longestId = lightbulbs[i].id;
+        }
+    }
+
+    map[longestId] = longest;
+    return map;
+}
 
 
 

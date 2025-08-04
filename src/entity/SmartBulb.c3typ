@@ -52,4 +52,7 @@ entity type SmartBulb mixes FeatureEvaluatable {
     // Return the shortest life span of the bulbs
     shortestLifeSpan: function(): map<string,double> js-server
 
+    // Return the {@link SmartBulb} with the longest lifespan
+    longestLifeSpan: function(): map<string,double> js-server
+
 }
