@@ -44,8 +44,30 @@ function averageLifeSpan() {
     }
 
     avg = sum / lightbulbs.length;
-    
+
     return avg;
+}
+
+function shortestLifeSpan(){
+    var map = {};
+    var lightbulbs, shortest, current;
+
+    lightbulbs = SmartBulb.fetch({ include: "id, startDate", limit: -1 }).objs;
+
+    shortestId = lightbulbs[0].id;
+    shortest = lightbulbs[0].lifeSpanInYears();
+
+    for(var i = 0; i < lightbulbs.length; i++){
+
+        current = lightbulbs[i].lifeSpanInYears();
+        if (shortest > current){
+            shortest = current;
+            shortestId = lightbulbs[i].id;
+        }
+    }
+
+    map[shortestId] = shortest;
+    return map;
 }
 
 
