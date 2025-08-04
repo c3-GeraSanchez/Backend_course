@@ -2,3 +2,5 @@ data/
 gen/
 .fingerprints.txt
 jsconfig.json
+.DS_Store
+metadata/.DS_Store

@@ -1,5 +1,5 @@
 {
-    "id": "AverageTemperatureBuilding",
+    "id": "AverageTemperature_Building",
     "name": "AverageTemperature",
     "srcType": "Building",
     "description": "Average temperature of the apartment's smart bulbs",

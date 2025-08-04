@@ -1,5 +1,5 @@
 {
-    "id": "AverageLumensBuilding",
+    "id": "AverageLumens_Building",
     "name": "AverageLumens",
     "srcType": "Building",
     "description": "Average lumens of the smart bulbs of a building",

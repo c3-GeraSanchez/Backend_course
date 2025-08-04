@@ -1,5 +1,5 @@
 {
-    "id": "AverageVoltageSmartBulb",
+    "id": "AverageVoltage_SmartBulb",
     "name": "AverageVoltage",
     "srcType": "SmartBulb",
     "description": "Average voltage of a smart bulb",

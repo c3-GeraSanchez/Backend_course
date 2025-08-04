@@ -1,5 +1,5 @@
 {
-    "id": "AverageTemperatureSmartBulb",
+    "id": "AverageTemperature_SmartBulb",
     "name": "AverageTemperature",
     "srcType": "SmartBulb",
     "description": "Average temperature of a smart bulb",

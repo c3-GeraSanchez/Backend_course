@@ -1,5 +1,5 @@
 {
-    "id": "AverageLumensSmartBulb",
+    "id": "AverageLumens_SmartBulb",
     "name": "AverageLumens",
     "srcType": "SmartBulb",
     "description": "Average lumens of a smart bulb",
